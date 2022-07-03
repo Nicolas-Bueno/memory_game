@@ -10,7 +10,6 @@
 .card {
     aspect-ratio: 3/4;
     width: 100%;
-    background-color: black;
     border-radius: 5px;
     position: relative;
     transition: all 400ms ease;
@@ -24,19 +23,23 @@
     background-position: center;
     background-size: cover;
     border-radius: 5px;
+    border: 2px solid orangered;
+    transition: all 400ms ease;
 }
 
 .front{
-    background-image: url(../img/itachi.jpg);
     transform: rotateY(180deg);
-    border: 2px solid orangered;
 }
 
 .back {
     background-image: url(../img/back.jpg);
     backface-visibility: hidden;
 }
-
-.card:hover {
+.reveal-card{
     transform: rotateY(180deg);
+}
+
+.disable-card{
+    filter: saturate(0);
+    opacity: 0.5;
 }
