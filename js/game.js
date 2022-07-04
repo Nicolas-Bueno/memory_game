@@ -63,10 +63,10 @@ const revealCard = ({ target }) => {
 
     if(target.parentNode.className.includes('reveal-card'))return;
         
-    if(firstCard==''){
+    if(firstCard ===''){
         target.parentNode.classList.add('reveal-card');
         firstCard = target.parentNode;
-    }else if (secondCard == '') {
+    }else if (secondCard === '') {
         target.parentNode.classList.add('reveal-card');
         secondCard = target.parentNode;
 
@@ -81,7 +81,7 @@ const createCard = (character) => {
     const front = createElement('div', 'face front');
     const back = createElement('div', 'face back');
 
-    front.style.backgroundImage = `url('../img/${character}.jpg')`
+    front.style.backgroundImage = `url('./img/${character}.jpg')`;
 
     card.appendChild(front);
     card.appendChild(back);
