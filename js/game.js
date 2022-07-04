@@ -119,4 +119,3 @@ window.onload = () => {
     startTime();
     loadGame();
 }
-
